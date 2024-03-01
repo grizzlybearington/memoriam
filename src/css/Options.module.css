@@ -1,20 +1,20 @@
 .optionsContainer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    border: 2px solid black;
-    padding: 10px;
-    transform: translate(-50%, -50%);
-    min-width: 116px;
-    font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	border: 2px solid black;
+	padding: 10px;
+	transform: translate(-50%, -50%);
+	min-width: 116px;
+	font-size: 20px;
 }
 
 .option {
-    margin: 7% 0;
+	margin: 7% 0;
 }
 
 .selectBox {
-    display: block;
-    margin: 0 auto;
+	display: block;
+	margin: 0 auto;
 }

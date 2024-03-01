@@ -20,16 +20,16 @@ const GameOver = ( { score, maxScore, onReplayClick }: GameOverProps ) => {
 	gameOverMessages[Math.floor(Math.random() * gameOverMessages.length)];
 
 	return (
-			<div className={css.gameOver}>
-				{gameOverMessage}
-				<div>
-					Score: <br/>
-					{score} / {maxScore}
-				</div>
-				<div className={css.replayButton} onClick={onReplayClick}>
-					One more once?
-				</div>
+		<div className={css.gameOver}>
+			{gameOverMessage}
+			<div>
+				Score: <br/>
+				{score} / {maxScore}
 			</div>
+			<div className={css.replayButton} onClick={onReplayClick}>
+				One more once?
+			</div>
+		</div>
 	)
 }
 

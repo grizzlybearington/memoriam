@@ -18,12 +18,12 @@ const Victory = ( { onReplayClick }: VictoryProps ) => {
 	victoryMessages[Math.floor(Math.random() * victoryMessages.length)];
 
 	return (
-			<div className={css.victory}>
-				{victoryMessage}
-				<div className={css.replayButton} onClick={onReplayClick}>
-					A little harder?
-				</div>
+		<div className={css.victory}>
+			{victoryMessage}
+			<div className={css.replayButton} onClick={onReplayClick}>
+				A little harder?
 			</div>
+		</div>
 	)
 }
 

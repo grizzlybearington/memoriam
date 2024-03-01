@@ -55,9 +55,9 @@ const Options = ({ onOptionsSubmit }: OptionsProps) => {
 				</label>
 			</div>
 			<div className={css.instructions}>
-					Instructions:<br/>
-					Select all of the cards, but do not select the same one
-					more than once!
+				Instructions:<br/>
+				Select all of the cards, but do not select the same one
+				more than once!
 			</div>
 			<button
 			onClick={onSubmit}>

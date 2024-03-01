@@ -1,29 +1,29 @@
 .victory {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    border: 2px solid black;
-    transform: translate(-50%, -50%);
-    min-width: 116px;
-    font-size: 20px;
-    background-color: #97ceaa;
-    color: black;
-    width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	border: 2px solid black;
+	transform: translate(-50%, -50%);
+	min-width: 116px;
+	font-size: 20px;
+	background-color: #97ceaa;
+	color: black;
+	width: 500px;
 }
 
 .replayButton {
-    margin: 30px auto;
-    padding: 20px;
-    border: solid black 3px;
-    width: 150px;
-    border-radius: 20px;
-    cursor: pointer;
-    background-color: #627769;
-    transition: 0.2s;
+	margin: 30px auto;
+	padding: 20px;
+	border: solid black 3px;
+	width: 150px;
+	border-radius: 20px;
+	cursor: pointer;
+	background-color: #627769;
+	transition: 0.2s;
 }
 
 .replayButton:hover {
-    background-color: black;
-    color: white;
+	background-color: black;
+	color: white;
 }

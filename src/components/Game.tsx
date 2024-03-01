@@ -80,24 +80,24 @@ const Game = ( {opts} : GameProps) => {
 			{reload && <>Loading...</>}
 			{loadError && <>There was an error. Please refresh.</>}
 			{gameOver &&
-					<GameOver
-					onReplayClick = {() => {
-						setGameOver(false);
-						scoreRef.current = 0;
-						setReload(true);
-					}}
-					score={scoreRef.current}
-					maxScore={opts.difficulty} />
+				<GameOver
+				onReplayClick = {() => {
+					setGameOver(false);
+					scoreRef.current = 0;
+					setReload(true);
+				}}
+				score={scoreRef.current}
+				maxScore={opts.difficulty} />
 			}
 			{victory &&
-					<Victory
-					onReplayClick = {() => {
-						setVictory(false);
-						scoreRef.current = 0;
-						opts.difficulty *= 2;
-						setReload(true);
-					}}
-					/>
+				<Victory
+				onReplayClick = {() => {
+					setVictory(false);
+					scoreRef.current = 0;
+					opts.difficulty *= 2;
+					setReload(true);
+				}}
+				/>
 			}
 			{!reload && !loadError && !gameOver && !victory &&
 				<div className={css.gameContainer}>

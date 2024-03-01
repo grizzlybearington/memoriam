@@ -8,14 +8,14 @@ interface CardProps {
 }
 
 const Card = ( { cardName, imgUrl, index, onCardClick }: CardProps) => {
-    return (
-        <div className={css.card} onClick={() => onCardClick(index)}>
-            <img className={css.img} src={imgUrl} alt={cardName} />
-            <div className={css.cardFooter}>
-                <h4><b>{cardName}</b></h4>
-            </div>
-        </div>
-    )
+	return (
+		<div className={css.card} onClick={() => onCardClick(index)}>
+			<img className={css.img} src={imgUrl} alt={cardName} />
+			<div className={css.cardFooter}>
+				<h4><b>{cardName}</b></h4>
+			</div>
+		</div>
+	)
 }
 
 export default Card;
