@@ -28,7 +28,7 @@ const Game = ( {opts} : GameProps) => {
 				setLoadError(false);
 				setRef.current.clear();
 				const data = await fetchPokeApi();
-				const count = data.count;
+				const count = data.count - 1;
 				const set: Set<PokeApiModel["results"][number]> = new Set();
 				while (set.size < opts.difficulty) {
 					const randIdx = Math.floor(Math.random() * count);
