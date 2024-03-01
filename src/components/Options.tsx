@@ -9,7 +9,7 @@ interface OptionsProps {
 
 const Options = ({ onOptionsSubmit }: OptionsProps) => {
   const [difficulty, setDifficulty] = useState(BASEDIFFICULTY);
-  const [theme, setTheme] = useState("Pokemon");
+  const [theme, setTheme] = useState("Pokémon");
 
   const handleDiffChange = (e: React.ChangeEvent<HTMLSelectElement>) :
   void => {
