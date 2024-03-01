@@ -8,10 +8,11 @@ import GameOver from "./GameOver";
 import Victory from "./Victory";
 
 interface GameProps {
-	opts: OptionsModel
+	opts: OptionsModel,
+	onReturnToOptions: () => void
 }
 
-const Game = ( {opts} : GameProps) => {
+const Game = ( {opts, onReturnToOptions } : GameProps) => {
 
 	const [cards, setCards] = useState<PokeApiModel["results"][number][]>([]);
 	const [reload, setReload] = useState(true);
@@ -78,7 +79,7 @@ const Game = ( {opts} : GameProps) => {
 	return (
 		<>
 			{reload && <>Loading...</>}
-			{loadError && <>There was an error. Please refresh.</>}
+			{loadError && <>An unknown error occurred. Please refresh.</>}
 			{gameOver &&
 				<GameOver
 				onReplayClick = {() => {
@@ -91,11 +92,12 @@ const Game = ( {opts} : GameProps) => {
 			}
 			{victory &&
 				<Victory
+				maxScore={opts.difficulty}
 				onReplayClick = {() => {
 					setVictory(false);
 					scoreRef.current = 0;
-					opts.difficulty *= 2;
 					setReload(true);
+					onReturnToOptions();
 				}}
 				/>
 			}

@@ -1,6 +1,7 @@
 import css from "../css/Victory.module.css";
 
 interface VictoryProps {
+	maxScore: number,
 	onReplayClick: () => void
 }
 
@@ -12,14 +13,15 @@ const victoryMessages = [
 	"The wiz-kid is here!",
 ];
 
-const Victory = ( { onReplayClick }: VictoryProps ) => {
+const Victory = ( { maxScore, onReplayClick }: VictoryProps ) => {
 
 	const victoryMessage =
 	victoryMessages[Math.floor(Math.random() * victoryMessages.length)];
 
 	return (
 		<div className={css.victory}>
-			{victoryMessage}
+			{victoryMessage} <br/>
+			You finished difficulty: {maxScore}.
 			<div className={css.replayButton} onClick={onReplayClick}>
 				A little harder?
 			</div>
