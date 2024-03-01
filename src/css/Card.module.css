@@ -1,0 +1,26 @@
+.card {
+    margin: 10px;
+    width: 250px;
+    height: 300px;
+    border-radius: 30px;
+    border: solid red 2px;
+    background-color: #55725f;
+    color: black;
+
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    cursor: pointer;
+}
+
+.cardFooter {
+    text-align: center;
+}
+
+.img {
+    max-width: 100%;
+    height: 80%;
+    margin: 0 auto;
+}
