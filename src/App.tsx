@@ -3,12 +3,12 @@ import Options from './components/Options';
 import OptionsModel from "./models/OptionsModel";
 import Game from './components/Game';
 
-export const BASEDIFFICULTY = 16;
+export const BaseDifficulty = 16;
 
 function App() {
 	const [showOptions, setShowOptions] = useState(true);
 	const [options, setOptions] =
-	useState<OptionsModel>({difficulty: BASEDIFFICULTY, theme: "Pokémon"});
+	useState<OptionsModel>({difficulty: BaseDifficulty, theme: "Pokémon"});
 
 	return (
 		<>
@@ -20,7 +20,10 @@ function App() {
 					setShowOptions(false);
 				}}/>
 			:
-				<Game opts={options}/>
+				<Game opts={options}
+					onReturnToOptions={() => {
+						setShowOptions(true);
+					}}/>
 			}
 		</>
 	);

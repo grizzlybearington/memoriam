@@ -14,7 +14,16 @@
 	margin: 7% 0;
 }
 
-.selectBox {
+.optionBox {
 	display: block;
 	margin: 0 auto;
+}
+
+.errorText {
+	color: red;
+	font-size: 14px;
+}
+
+.numberBox {
+	width: 50px;
 }
